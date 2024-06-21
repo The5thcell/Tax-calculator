@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../../links.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Tex calculator</title>
+  </head>
+  <body>
+    <div class="app-container">
+      <h1>Income Tax calculator</h1>
+      <div class="app">
+        <div class="form">
+          <div class="input-container">
+            <input
+              type="number"
+              id="income"
+              class="input"
+              placeholder=""
+              required
+            />
+            <small class="alert"></small>
+            <div class="cut cut-short"></div>
+            <label for="income" class="placeholder">Enter your income</label>
+          </div>
+          <label for="status">Filing Status:</label>
+          <select id="status">
+            <option value="single">Single</option>
+            <option value="married">Married</option>
+            <option value="headOfHousehold">Head Of Household</option>
+          </select>
+          <label for="dependets">Standard deduction:</label>
+          <h4 id="standard-deduction">$0.00</h4>
+
+          <button type="submit" id="calculate-button" class="btn submit">
+            Calculate
+          </button>
+        </div>
+        <div class="result">
+          <small>Your estimated tex amount:</small>
+          <h3 id="tax-amount">$0.00</h3>
+          <button class="btn btn-close">X</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./modules/app.js"></script>
+  </body>
+</html>
